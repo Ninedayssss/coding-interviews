@@ -1,4 +1,4 @@
-package com.itsnine.code.simple;
+package com.itsnine.code.sword.simple;
 
 /**
  * 旋转数组的最小值
@@ -27,6 +27,14 @@ public class RevolveArrayMinNum {
         return numbers[0];
     }
 
+    /**
+     * 二分搜索解决
+     * 当Left指针与Right指针重合时，说明找到了两个数组的最小节点
+     * 时间复杂度O(log n) 空间复杂度O(1)
+     *
+     * @param nums
+     * @return
+     */
     public int binarySearch(int[] nums) {
         int left = 0;
         int right = nums.length - 1;

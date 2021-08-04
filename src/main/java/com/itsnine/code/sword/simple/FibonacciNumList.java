@@ -1,4 +1,4 @@
-package com.itsnine.code.simple;
+package com.itsnine.code.sword.simple;
 
 /**
  * 斐波那契数列

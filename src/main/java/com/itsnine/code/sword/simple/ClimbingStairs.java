@@ -1,4 +1,4 @@
-package com.itsnine.code.simple;
+package com.itsnine.code.sword.simple;
 
 /**
  * 青蛙跳台阶
@@ -16,6 +16,7 @@ public class ClimbingStairs {
      * 跳1级，后面剩下n-1级台阶，可看作f(n-1)
      * 跳2级，后面剩下n-2级台阶，可看作f(n-2)
      * f(n)=f(n-1)+f(n-2)
+     * 时间复杂度：O(n) 空间复杂度：O(1)
      * </p>
      *
      * @param n
@@ -54,6 +55,7 @@ public class ClimbingStairs {
      * f(n) = 2*f(n-1)
      *
      * </p>
+     * 时间复杂度：O(n) 空间复杂度：O(1)
      *
      * @param n
      * @return

@@ -1,4 +1,4 @@
-package com.itsnine.code.simple;
+package com.itsnine.code.sword.simple;
 
 import java.util.LinkedList;
 
