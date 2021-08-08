@@ -1,4 +1,4 @@
-package com.itsnine.code.sword.simple;
+package com.itsnine.code.sword.simple.array;
 
 /**
  * 旋转数组的最小值

@@ -1,4 +1,4 @@
-package com.itsnine.code.sword.simple;
+package com.itsnine.code.sword.simple.dp;
 
 /**
  * 青蛙跳台阶

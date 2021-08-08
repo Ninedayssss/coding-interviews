@@ -1,4 +1,4 @@
-package com.itsnine.code.sword.simple;
+package com.itsnine.code.sword.simple.listnode;
 
 import com.itsnine.code.sword.base.ListNode;
 
