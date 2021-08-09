@@ -35,5 +35,16 @@ public class DayDayTest {
         return s.replaceAll(" ","%20");
     }
 
+    public int minArray(int[] nums){
+        int i = 0,j=nums.length-1;
+        while (i<j){
+            int m = (i+j)/2;
+            if (nums[j] > nums[m]) j = m;
+            else if (nums[j] < nums[m]) i = m+1;
+            else j--;
+        }
+        return nums[i];
+    }
+
 
 }
