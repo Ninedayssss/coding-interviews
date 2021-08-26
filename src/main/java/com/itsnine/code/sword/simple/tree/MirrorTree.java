@@ -3,7 +3,6 @@ package com.itsnine.code.sword.simple.tree;
 import com.itsnine.code.sword.base.TreeNode;
 
 import java.util.Objects;
-import java.util.Queue;
 import java.util.Stack;
 
 /**
