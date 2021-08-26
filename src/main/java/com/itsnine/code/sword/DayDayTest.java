@@ -31,19 +31,33 @@ public class DayDayTest {
         return array;
     }
 
-    public String replaceSpace(String s){
-        return s.replaceAll(" ","%20");
+    public String replaceSpace(String s) {
+        return s.replaceAll(" ", "%20");
     }
 
-    public int minArray(int[] nums){
-        int i = 0,j=nums.length-1;
-        while (i<j){
-            int m = (i+j)/2;
+    public int minArray(int[] nums) {
+        int i = 0, j = nums.length - 1;
+        while (i < j) {
+            int m = (i + j) / 2;
             if (nums[j] > nums[m]) j = m;
-            else if (nums[j] < nums[m]) i = m+1;
+            else if (nums[j] < nums[m]) i = m + 1;
             else j--;
         }
         return nums[i];
+    }
+
+    public int fib(int n) {
+        if (n == 1 || n == 0)
+            return n;
+        int a = 0;
+        int b = 1;
+        int c = 0;
+        for (int i = 2; i <= n; i++) {
+            c = (a + b) % 1000000007;
+            a = b;
+            b = c;
+        }
+        return c;
     }
 
 
