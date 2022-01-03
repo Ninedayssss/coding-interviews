@@ -29,7 +29,9 @@ public class ChangePrintlnTreeNode {
     public List<List<Integer>> resolve(TreeNode root) {
         //初始化queue
         Queue<TreeNode> queue = new LinkedList<>();
-        if (root != null) queue.add(root);
+        if (root != null) {
+            queue.add(root);
+        }
         List<List<Integer>> list = new ArrayList<>();
 
         while (!queue.isEmpty()) {
@@ -39,13 +41,20 @@ public class ChangePrintlnTreeNode {
             for (int i = queue.size(); i > 0; i--) {
                 TreeNode node = queue.poll();
                 //结果list的size可表明已经添加了多少层，由此可知当前循环的层级
-                //偶数层-》添加至链表尾部 实现从左至右打印
-                if (list.size() % 2 == 0) tmp.addLast(node.val);
+                if (list.size() % 2 == 0) {
+                    //偶数层-》添加至链表尾部 实现从左至右打印
+                    tmp.addLast(node.val);
+                } else {
                     //奇数层-》添加至链表首部，实现从右至左打印
-                else tmp.addFirst(node.val);
+                    tmp.addFirst(node.val);
+                }
 
-                if (node.left != null) queue.add(node.left);
-                if (node.right != null) queue.add(node.right);
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
             }
             list.add(tmp);
         }

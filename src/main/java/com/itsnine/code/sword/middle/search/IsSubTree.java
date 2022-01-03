@@ -42,9 +42,13 @@ public class IsSubTree {
 
     private boolean isEq(TreeNode a, TreeNode b) {
         //树B为空，已匹配完成（超越叶子节点）
-        if (b == null) return true;
+        if (b == null){
+            return true;
+        }
         //树A为空 或者 树A与树B的值不相等
-        if (a == null || a.val != b.val) return false;
+        if (a == null || a.val != b.val){
+            return false;
+        }
         //递归判断树A与树B的左节点、右节点是否一致
         return (isEq(a.left, b.left) && isEq(a.right, b.right));
     }

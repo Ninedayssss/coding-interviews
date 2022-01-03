@@ -21,7 +21,9 @@ public class PrintlnTreeNode {
     public List<List<Integer>> resolve(TreeNode root) {
         //初始化queue
         Queue<TreeNode> queue = new LinkedList<>();
-        if (root != null) queue.add(root);
+        if (root != null) {
+            queue.add(root);
+        }
         List<List<Integer>> list = new ArrayList<>();
 
         while (!queue.isEmpty()) {
@@ -31,8 +33,12 @@ public class PrintlnTreeNode {
             for (int i = queue.size(); i > 0; i--) {
                 TreeNode node = queue.poll();
                 tmp.add(node.val);
-                if (node.left != null) queue.add(node.left);
-                if (node.right != null) queue.add(node.right);
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
             }
             list.add(tmp);
         }

@@ -27,7 +27,9 @@ public class MirrorTree {
      * @return
      */
     public TreeNode resolve(TreeNode root) {
-        if (Objects.isNull(root)) return null;
+        if (Objects.isNull(root)){
+            return null;
+        }
         TreeNode tmp = root.left;
         root.left = resolve(root.right);
         root.right = resolve(tmp);
@@ -48,13 +50,19 @@ public class MirrorTree {
      * @return
      */
     public TreeNode supStack(TreeNode root) {
-        if (Objects.isNull(root)) return null;
+        if (Objects.isNull(root)){
+            return null;
+        }
         Stack<TreeNode> stack = new Stack<>();
         stack.add(root);
         while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
-            if (Objects.nonNull(node.left)) stack.add(node.left);
-            if (Objects.nonNull(node.right)) stack.add(node.right);
+            if (Objects.nonNull(node.left)){
+                stack.add(node.left);
+            }
+            if (Objects.nonNull(node.right)){
+                stack.add(node.right);
+            }
             TreeNode tmp = node.left;
             node.left = node.right;
             node.right = tmp;

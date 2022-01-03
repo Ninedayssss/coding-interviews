@@ -37,7 +37,7 @@ class Stack2Queue {
        }
         //a栈不为空，将a栈的尾部移除，插入b栈的尾部，实现将a栈倒序
        while (!a.isEmpty()){
-           b.addLast(b.removeLast());
+           b.addLast(a.removeLast());
        }
        return b.removeLast();
     }

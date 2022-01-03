@@ -28,7 +28,9 @@ public class PrintTreeNode {
      * @return
      */
     public int[] resolve(TreeNode root) {
-        if (root == null) return new int[0];
+        if (root == null) {
+            return new int[0];
+        }
         //初始化队列
         Queue<TreeNode> queue = new LinkedList<>();
         List<Integer> list = new ArrayList<>();
@@ -40,8 +42,12 @@ public class PrintTreeNode {
             TreeNode node = queue.poll();
             list.add(node.val);
             //当前节点的左节点若不为空，将左节点加入队列，右节点同理
-            if (node.left != null) queue.add(node.left);
-            if (node.right != null) queue.add(node.right);
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+            }
         }
 
         //将ArrayList转换为int[]

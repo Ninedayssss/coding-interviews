@@ -24,8 +24,12 @@ public class IsSymmetricTree {
     }
 
     public boolean recur(TreeNode left, TreeNode right) {
-        if (Objects.isNull(left) && Objects.isNull(right)) return true;
-        if (Objects.isNull(left) || Objects.isNull(right) || !Objects.equals(left.val, right.val)) return false;
+        if (Objects.isNull(left) && Objects.isNull(right)){
+            return true;
+        }
+        if (Objects.isNull(left) || Objects.isNull(right) || !Objects.equals(left.val, right.val)){
+            return false;
+        }
         return recur(left.left, right.right) && recur(left.right, right.left);
     }
 }
