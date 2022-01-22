@@ -1,6 +1,7 @@
 package com.itsnine.code.sword;
 
 import com.itsnine.code.sword.base.ListNode;
+import com.itsnine.code.sword.base.TreeNode;
 import sun.security.util.Length;
 
 import java.util.*;
@@ -101,9 +102,6 @@ public class DayDayTest {
         return true;
     }
 
-    public static void main(String[] args) {
-        System.out.println(calculate("45+5*6"));
-    }
 
 
     /**
@@ -233,40 +231,5 @@ public class DayDayTest {
         return ans;
     }
 
-    public static int calc(String s) {
-        char[] chars = s.toCharArray();
-        Stack<Integer> st = new Stack<>();
-        int result = 0;
-        int i = 0;
-        while (i < chars.length) {
-            char tmp = chars[i];
-            if (tmp == '+' || tmp == '-' || tmp == '*' || tmp == '/') {
-                i++;
-            }
-            int num = 0;
-            if (i < chars.length && Character.isDigit(chars[i])) {
-                num = num * 10 + chars[i] - '0';
-                i++;
-            }
-
-            switch (tmp) {
-                case '-':
-                    num = -num;
-                    break;
-                case '*':
-                    num = st.pop() * num;
-                    break;
-                case '/':
-                    num = st.pop() / num;
-                    break;
-            }
-            st.push(num);
-        }
-        while (!st.isEmpty()) {
-            result += st.pop();
-        }
-
-        return result;
-    }
 
 }
